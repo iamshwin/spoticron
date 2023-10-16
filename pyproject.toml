@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "spoticron"
+version = "0.1.0"
+description = ""
+authors = ["iamshwin <ashwinbhanot@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+spotipy = "^2.23.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+flake8 = "^6.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
