@@ -12,7 +12,9 @@ auth_manager = SpotifyOAuth(
     open_browser=False,
 )
 
-sp = spotipy.Spotify(auth_manager=auth_manager)
+sp = spotipy.Spotify(auth=os.environ["SPOTIFY_ACCESS_TOKEN"], auth_manager=auth_manager)
+auth_manager.refresh_access_token(os.environ["SPOTIFY_REFRESH_TOKEN"])
+
 
 # Get discover weekly playlist
 DISCOVER_WEEKLY_PLAYLIST_ID = os.environ["DISCOVER_WEEKLY_PLAYLIST_ID"]
